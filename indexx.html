@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// Este metodo FILTER crea una nueva matriz llena de elementos que pasan una prueba proporcionada por una función.
+// No ejecuta la función para elementos vacíos.
+// No cambia la matriz original.
+
+//CASO DE USO:  Lo primero que estoy haciendo es declarar variables de tipo bebidas para poder trabajar con varios metodos
+//despues le estoy diciendo a la consola que busque los productos con cantidad igual o menor a 400
+
+let LasBebidas =[{"nombre":"Cocacola", capacidad: 310 },
+{"nombre":"Pepsi", capacidad: 400},
+{"nombre":"Caballitos", capacidad: 350},
+{"nombre":"Manzanita", capacidad: 310},
+{"nombre":"Aguamineral", capacidad: 410},
+{"nombre":"Jugo", capacidad: 500}
+];
+
+let LasBebidasChicas = LasBebidas.filter( e => e.capacidad <400);
+console.log(LasBebidasChicas); 
+
+
+</script>
+
+
+
+
+</body>
+</html>
