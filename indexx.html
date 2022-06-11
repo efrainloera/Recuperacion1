@@ -18,69 +18,35 @@
 //despues le estoy diciendo a la consola que busque los productos con cantidad igual o menor a 400
 
 let LasBebidas =[{"nombre":"Cocacola", capacidad: 310 },
-{"nombre":"Pepsi", capacidad: 400},
-{"nombre":"Caballitos", capacidad: 350},
-{"nombre":"Manzanita", capacidad: 310},
-{"nombre":"Aguamineral", capacidad: 410},
-{"nombre":"Jugo", capacidad: 500}
+{nombre:"Pepsi", capacidad: 400},
+{nombre:"Caballitos", capacidad: 350},
+{nombre:"Manzanita", capacidad: 310},
+{nombre:"Aguamineral", capacidad: 410},
+{nombre:"Jugo", capacidad: 500}
 ];
 
 let LasBebidasChicas = LasBebidas.filter( e => e.capacidad <400);
 console.log(LasBebidasChicas); 
 
-// Hoisting,fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript 
-
-//CASO DE USO:  se llama a una funcion antes de que esta este definida
-
-let nombre = 'Efrain'
-
-Saludar(nombre)
-function Saludar(nombre) {
-    console.log(nombre)
-}
 
 
 
-//Las PROMESAS son un objeto devuelto al cuál se adjuntan funciones callback ,
-// en lugar de pasar callbacks a una función. Llamamos a esto una llamada a función asíncrona
+//El metodo FIND devuelve el valor del primer elemento que pasa una prueba.
+//método ejecuta una función para cada elemento de la matriz.
+// regresa undefinedsi no se encuentran elementos.
+// no ejecuta la función para elementos vacíos.
+// no cambia la matriz original.
 
-//CASO DE USO: En este caso de las promesa lo unico que mostrar seran mensajes despues de lo segundo asignado 
-//mostrara la promesa 2 y igual que la primera solo mostrara el mensaje
+//CASO DE USO: Aqui la funcion find iterara con cada uno de los elementos hasta que llegue con el elemento que busca 
+//por asi decirlo
 
-const MiPromesa = new Promise((resolve, reject) => {
-    console.log("Trabajando");
-    setTimeout(function(){
-     resolver("Finalizado");
-    },3000);
-
+let x = LasBebidas.find(function(bebida){
+    return bebida.nombre == 'Manzanita';
 });
 
-const MiPromesa2 = () =>{
-    return new Promise((resolve, reject)=>{
-        console.log("Trabajando en algo mas")
-        setTimeout(function(){
-            resolve("Terminado");
-        },2000);
-    })
-}
+console.log(x);
+=======
 
-MiPromesa.then(resultado=>{
-    return resultado;
-}).then(mensaje => {
-     console.log(mensaje);
-}).catch(message=>{
-    console.error(message);
-})
-
-
-
-//El metodo REPLACE devuelve una nueva cadena con algunas o todas las coincidencias de un patrón 
-
-//CASO DE USO: Este es un ejemplo muy sencillo lo unico que estamos haciendo es remplazar el saludo y la despedida
-
-var cadena = "Hola efrain. Nos vemos";
-cadena = cadena.replace("Bienvenido", "Chao");
-document.write( cadena );
 
 </script>
 
