@@ -28,6 +28,18 @@ let LasBebidas =[{"nombre":"Cocacola", capacidad: 310 },
 let LasBebidasChicas = LasBebidas.filter( e => e.capacidad <400);
 console.log(LasBebidasChicas); 
 
+// Hoisting,fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript 
+
+//CASO DE USO:  se llama a una funcion antes de que esta este definida
+
+let nombre = 'Efrain'
+
+Saludar(nombre)
+function Saludar(nombre) {
+    console.log(nombre)
+}
+
+
 
 </script>
 
