@@ -44,7 +44,16 @@ let LasBebidasUsadas = LasBebidas.map( e => {
 console.log(LasBebidasUsadas);
 
 
+//Metodo REDUCE ejecuta una función reductora para el elemento de matriz.
+//método devuelve un único valor: el resultado acumulado de la función.
+// no ejecuta la función para elementos de matriz vacíos.
+// no cambia la matriz original.
 
+//CASO DE USO: En este ewjemplo ocupe reduce para que haga acumulaciones de la capacidad de las bebidas
+
+let ProductoQueQueda = LasBebidas.reduce( (acumulado, sig) => acumulado + sig.capacidad, 0)
+console.log(ProductoQueQueda);
+=======
 
 
 
