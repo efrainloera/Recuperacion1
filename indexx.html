@@ -41,6 +41,38 @@ function Saludar(nombre) {
 
 
 
+//Las PROMESAS son un objeto devuelto al cuál se adjuntan funciones callback ,
+// en lugar de pasar callbacks a una función. Llamamos a esto una llamada a función asíncrona
+
+//CASO DE USO: En este caso de las promesa lo unico que mostrar seran mensajes despues de lo segundo asignado 
+//mostrara la promesa 2 y igual que la primera solo mostrara el mensaje
+
+const MiPromesa = new Promise((resolve, reject) => {
+    console.log("Trabajando");
+    setTimeout(function(){
+     resolver("Finalizado");
+    },3000);
+
+});
+
+const MiPromesa2 = () =>{
+    return new Promise((resolve, reject)=>{
+        console.log("Trabajando en algo mas")
+        setTimeout(function(){
+            resolve("Terminado");
+        },2000);
+    })
+}
+
+MiPromesa.then(resultado=>{
+    return resultado;
+}).then(mensaje => {
+     console.log(mensaje);
+}).catch(message=>{
+    console.error(message);
+})
+
+
 </script>
 
 
