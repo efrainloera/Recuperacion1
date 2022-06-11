@@ -18,11 +18,11 @@
 //despues le estoy diciendo a la consola que busque los productos con cantidad igual o menor a 400
 
 let LasBebidas =[{"nombre":"Cocacola", capacidad: 310 },
-{"nombre":"Pepsi", capacidad: 400},
-{"nombre":"Caballitos", capacidad: 350},
-{"nombre":"Manzanita", capacidad: 310},
-{"nombre":"Aguamineral", capacidad: 410},
-{"nombre":"Jugo", capacidad: 500}
+{nombre:"Pepsi", capacidad: 400},
+{nombre:"Caballitos", capacidad: 350},
+{nombre:"Manzanita", capacidad: 310},
+{nombre:"Aguamineral", capacidad: 410},
+{nombre:"Jugo", capacidad: 500}
 ];
 
 let LasBebidasChicas = LasBebidas.filter( e => e.capacidad <400);
@@ -42,6 +42,11 @@ let LasBebidasUsadas = LasBebidas.map( e => {
     return e;
 });
 console.log(LasBebidasUsadas);
+
+
+
+
+
 
 
 </script>
