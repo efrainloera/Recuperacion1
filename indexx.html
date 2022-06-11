@@ -28,6 +28,61 @@ let LasBebidas =[{"nombre":"Cocacola", capacidad: 310 },
 let LasBebidasChicas = LasBebidas.filter( e => e.capacidad <400);
 console.log(LasBebidasChicas); 
 
+//Metodo MAP crea una nueva matriz llamando a una función para cada elemento de la matriz.
+//llama a una función una vez para cada elemento en una matriz.
+//no ejecuta la función para elementos vacíos.
+//no cambia la matriz original
+
+//CASO DE USO: Lo use para que muestre los valores menos la capacidad asignada,
+//osea que a todas las bebidas se les restara en este caso -110
+
+
+let LasBebidasUsadas = LasBebidas.map( e => {
+    e.capacidad -= 110;
+    return e;
+});
+console.log(LasBebidasUsadas);
+
+//Metodo REDUCE ejecuta una función reductora para el elemento de matriz.
+//método devuelve un único valor: el resultado acumulado de la función.
+// no ejecuta la función para elementos de matriz vacíos.
+// no cambia la matriz original.
+
+//CASO DE USO: En este ewjemplo ocupe reduce para que haga acumulaciones de la capacidad de las bebidas
+
+let ProductoQueQueda = LasBebidas.reduce( (acumulado, sig) => acumulado + sig.capacidad, 0)
+console.log(ProductoQueQueda);
+
+
+//El metodo FIND devuelve el valor del primer elemento que pasa una prueba.
+//método ejecuta una función para cada elemento de la matriz.
+// regresa undefinedsi no se encuentran elementos.
+// no ejecuta la función para elementos vacíos.
+// no cambia la matriz original.
+
+//CASO DE USO: Aqui la funcion find iterara con cada uno de los elementos hasta que llegue con el elemento que busca 
+//por asi decirlo
+
+let x = LasBebidas.find(function(bebida){
+    return bebida.nombre == 'Manzanita';
+});
+
+console.log(x);
+
+//El metodo findIndex ejecuta una función para cada elemento de la matriz.
+//devuelve el índice (posición) del primer elemento que pasa una prueba.
+//devuelve -1 si no se encuentra ninguna coincidencia.
+//no ejecuta la función para elementos de matriz vacíos.
+//no cambia la matriz original.
+
+//CASO DE USO: En este ejemplo lo que estoy haciendo es que con la funcion findIndex le estoy diciendo que busque 
+// una de las bebidas que cuente con la capacidad exacta y que elimine ese producto
+
+
+let bebidas = LasBebidas.findIndex(em => em.capacidad === 400)
+LasBebidas.splice(LasBebidas.findIndex(em => em.capacidad === 400), 1)
+
+console.log(LasBebidas)
 
 
 
